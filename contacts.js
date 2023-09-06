@@ -13,7 +13,8 @@ function listContacts() {
       console.error('Błąd odczytu pliku', err);
       return;
     }
-    console.log(data);
+    const contacts = JSON.parse(data);
+    console.table(contacts);
   });
 }
 
